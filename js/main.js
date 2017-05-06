@@ -1,18 +1,18 @@
 /* global $ */
 let input = $('.input p')
-let number = $('.box p')
+let box = $('.box p')
+let inputNumbers = ''
 
 function clearInput () {
   input.html('')
+  inputNumbers = ''
 }
 
 function injectNumbersintoInput (e) {
-  // input.html(number)
-  // console.log(number.html())
-  let num = e.target.innerHTML
-  input.html(num)
-  console.log(e.target.innerHTML)
+  let number = e.target.innerHTML
+  inputNumbers += number // keep track of numbers being inputed
+  input.html(inputNumbers)
 }
 
-$('.box').on('click', injectNumbersintoInput)
+box.on('click', injectNumbersintoInput)
 $('.clear').on('click', clearInput)
