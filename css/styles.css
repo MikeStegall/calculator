@@ -25,8 +25,18 @@
 .function {
   background: #83C178
 }
+.function:hover{
+  color: black;
+}
 .clear {
   flex: 1;
+}
+.clear:hover{
+  background: #83C178;
+}
+.equals:hover{
+  color: black;
+  background: #83C178;
 }
 .input{
   flex: 3.1;

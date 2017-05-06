@@ -1,16 +1,26 @@
 /* global $ */
-let input = $('.input p')
-let box = $('.box p')
+const input = $('.input p')
+const box = $('.box p')
 let inputNumbers = ''
+let operators = ['+', '-', '*', '/']
+let createNum
+let num = parseInt(inputNumbers, 10)
 
 function clearInput () {
   input.html('')
   inputNumbers = ''
 }
-
+function equal () {
+  // console.log(typeof num)
+  console.log(num)
+}
 function injectNumbersintoInput (e) {
   let number = e.target.innerHTML
-  inputNumbers += number // keep track of numbers being inputed
+  if (number !== '=') {
+    inputNumbers += number // keep track of numbers being inputed
+  } else {
+    equal()
+  }
   input.html(inputNumbers)
 }
 
