@@ -3,7 +3,6 @@ const input = $('.input p')
 const box = $('.box p')
 let inputNumbers = ''
 let operators = ['+', '-', '*', '/']
-let createNum
 let num = parseInt(inputNumbers, 10)
 
 function clearInput () {
@@ -11,6 +10,7 @@ function clearInput () {
   inputNumbers = ''
 }
 function equal () {
+  let num = parseInt(inputNumbers, 10)
   // console.log(typeof num)
   console.log(num)
 }
