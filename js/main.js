@@ -15,8 +15,8 @@ $('.decimal p').click((e) => {
 })
 
 function calculateResult () {
-  let result = inputNumbersArr.reduce((accu, currentValue, index, arr) => {
-    let parsednum = parseFloat(arr[index + 1])
+  let result = inputNumbersArr.reduce((accu, currentValue, index) => {
+    let parsednum = parseFloat(inputNumbersArr[index + 1])
     accu = parseFloat(accu)
     if (currentValue === '+') {
       accu += parsednum
